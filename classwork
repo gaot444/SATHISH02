@@ -1,1 +1,106 @@
-27/02/25
+25/02/2025
+1.DISPLAYING THE LOWER MATRIX
+
+import java.util.*;//import java.util.*;
+public class Main{
+        public static boolean lowermatrix(int a[][],int s){
+            boolean yes=true;
+            for(int i=0;i<s;i++)
+            {
+                for(int j=i+1;j<s;j++)
+                {
+                    if(a[i][j]!=0)
+                    yes=false;
+                    break;
+                }
+               
+            }
+            return yes;
+        }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+    int size=sc.nextInt();
+    int size1=sc.nextInt();
+    int arr[][]=new int[size][size1];
+    for(int i=0;i<size;i++){
+        for(int i1=0;i1<size;i1++)
+        arr[i][i1]=sc.nextInt();
+    }
+   if(lowermatrix(arr,size))
+   System.out.println("Lowermatrix");
+   else
+   System.out.println("Not a Lowermatrix");
+    }
+}
+
+2.UPPER MATRIX
+
+import java.util.*;//import java.util.*;
+public class Main{
+        public static boolean lowermatrix(int a[][],int s){
+            boolean yes=true;
+            for(int i=0;i<s;i++)
+            {
+                for(int j=1;j<i;j++)
+                {
+                    if(a[i][j]!=0)
+                    yes=false;
+                    break;
+                }
+               
+            }
+            return yes;
+        }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+    int size=sc.nextInt();
+    int size1=sc.nextInt();
+    int arr[][]=new int[size][size1];
+    for(int i=0;i<size;i++){
+        for(int i1=0;i1<size;i1++)
+        arr[i][i1]=sc.nextInt();
+    }
+   if(lowermatrix(arr,size))
+   System.out.println("Uppermatrix");
+   else
+   System.out.println("Not a Uppermatrix");
+    }
+}
+
+3.SYMMENTRY MATRIX
+
+import java.util.*;//import java.util.*;
+public class Main{
+        public static boolean lowermatrix(int a[][],int s){
+            boolean yes=true;
+            for(int i=0;i<s;i++)
+            {
+                for(int j=0;j<s;j++)
+                {
+                    if(a[i][j]!=a[j][i])
+                    yes=false;
+                    break;
+                }
+               
+            }
+            return yes;
+        }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+    int size=sc.nextInt();
+    int size1=sc.nextInt();
+    int arr[][]=new int[size][size1];
+    for(int i=0;i<size;i++){
+        for(int i1=0;i1<size;i1++)
+        arr[i][i1]=sc.nextInt();
+    }
+   if(lowermatrix(arr,size))
+   System.out.println("SYMMENTRY");
+   else
+   System.out.println("Not a SYMMENTRY");
+    }
+}
+
+27/02/2025
+
+1.
