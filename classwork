@@ -32,7 +32,9 @@ public class Main{
    System.out.println("Not a Lowermatrix");
     }
 }
+
 *********************------------------**************************
+
 2.UPPER MATRIX
 
 import java.util.*;//import java.util.*;
@@ -66,7 +68,9 @@ public class Main{
    System.out.println("Not a Uppermatrix");
     }
 }
+
 *********************------------------**************************
+
 3.SYMMENTRY MATRIX
 
 import java.util.*;//import java.util.*;
@@ -101,6 +105,112 @@ public class Main{
     }
 }
 *********************------------------**************************
+*********************------------------**************************
+*********************------------------**************************
 27/02/2025
 
-1.
+1.CONSTRUCTER
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+      ADD sc=new ADD(10);
+      ADD sc1=new ADD();
+    }
+  }
+class ADD { 
+  ADD()
+  {
+    System.out.println(30);
+  }
+  ADD(int a)
+  {
+    System.out.println(a+30);
+  }
+}
+
+*********************------------------**************************
+
+2.ARRAYLIST USING OOPS
+
+import java.util.*;
+class Main {
+    public static void main(String[]args){
+        List<Player> A =new ArrayList<>();
+        Player p1=new Player();
+        p1.name="Karthikeyan";
+        p1.country="india";
+        p1.skill="football";
+        A.add(p1);
+        Player p2=new Player();
+        p2.name="Arun";
+        p2.country="india";
+        p2.skill="cricket";
+        A.add(p2);
+        for(Player p : A){
+            System.out.println(p.name+"-->"+p.country+"-->"+p.skill);
+        }
+    }
+}
+class Player{
+   public String name;
+   public String country;
+   public String skill;
+}
+
+*********************------------------**************************
+
+3.ENCAPSULATION
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+      ADD sc=new ADD();
+      sc.set(100);
+      System.out.println(sc.get());
+    }
+  }
+class ADD {
+  private int x;
+  public void set(int a){
+    x=a;
+  }
+  public int get()
+  {
+    return x;
+  }
+}
+
+*********************------------------**************************
+
+3.AREA OF RECTANGLE USING PRIVATE CLASS
+
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+      
+      Scanner sc1=new Scanner(System.in);
+      double height=sc1.nextDouble();
+      double lenght=sc1.nextDouble();
+      WALL sc=new WALL(lenght,height);
+      System.out.println(sc.calculatearea());
+    }
+  }
+class WALL {
+  private double l,b;
+  WALL(double le,double be)
+  {
+    l=le;
+    b=be;
+  }
+  public double calculatearea()
+  {
+    return l*b;
+  }
+}
+
+ *********************------------------**************************
+
+4.
+ 
+ 
