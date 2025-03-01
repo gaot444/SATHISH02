@@ -210,7 +210,156 @@ class WALL {
 }
 
  *********************------------------**************************
+ *********************------------------**************************
+ *********************------------------**************************
 
-4.
- 
- 
+
+01/03/2025
+
+INHERITANCE
+
+******************//Class  Student(//parent class){
+int mark=90;
+String Name="Sathish";
+}
+class College extends Students(//child class){
+String dept="EEE";
+}
+class Main{
+p s v m();
+college s1=new college();
+s.o.p(s1.name);
+OUTPUT:
+Sathish
+////////////////******************************
+
+1.INHERITANCE
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+  college s1= new college();
+  System.out.println(s1.name);
+  s1.name="ram";
+  System.out.println(s1.name);
+  }
+}
+  class student{
+    int mark=90;
+    String name="Sathish";
+  }
+  class college extends student{
+    String dept="EEE";
+  }
+
+ *********************------------------**************************
+
+2.MULTI LEVEL INHERITANCE
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+  placement s1= new placement();
+  System.out.println(s1.name);
+  System.out.println(s1.mark);
+  s1.name="ram";
+  System.out.println(s1.name);
+  System.out.println(s1.dept);
+  System.out.println(s1.cgpa);
+  }
+}
+  class student{
+    int mark=90;
+    String name="Sathish";
+  }
+  class college extends student{
+    String dept="EEE";
+  }
+  class placement extends college{
+    double cgpa=8.21;
+  }
+
+ *********************------------------**************************
+
+3.FUNCTION OVER LOADING 
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    EEE sc=new EEE();
+    Scanner obj=new Scanner(System.in);
+    double a=obj.nextDouble();
+    double b=obj.nextDouble();
+    sc.add(a,b);
+  }
+}
+  class EEE{
+    public void add(int x,int y){
+      System.out.println(x+y);
+    }
+      public void add(double x, double y){
+        System.out.println(x+y);
+      }
+    }
+
+  *********************------------------**************************
+
+4.FUNCTION OVER LOADING WITH 3 CLASS
+import java.util.*;
+public class Main{
+ public static void main(String[] args){
+   three obj=new three();
+   obj.display();
+ }
+  }
+
+  class one{
+    public void display(){
+      System.out.println("class one");
+    }
+  }
+    class two extends one{
+      public void display(){
+        System.out.println("class two");
+      }
+    }
+    class three extends two{
+      public void display(){
+        System.out.println("class three");
+    }
+    }
+
+ *********************------------------**************************
+ 5.SAME FUNCTION NAME WITH DIFFERENT PARAMETER
+
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    EEE sc=new EEE();
+    Scanner obj=new Scanner(System.in);
+    int n=obj.nextInt();
+    if(n==2){
+       int a=obj.nextInt();
+       int b=obj.nextInt();
+    sc.add(a,b);
+    }
+    else if(n==3){
+      int a=obj.nextInt();
+      int b=obj.nextInt();
+      int c=obj.nextInt();
+      
+    sc.mul(a,b,c);
+    }
+    else
+    System.out.println("invalid input");
+  }
+}
+  class EEE{
+    public void add(int x,int y){
+      System.out.println(x+y);
+    }
+      public void mul(int x,int y,int z){
+        System.out.println(x*y*z);
+      }
+    }
+    
+ *********************------------------**************************
+ *********************------------------**************************
+ *********************------------------**************************
