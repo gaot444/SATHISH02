@@ -107,6 +107,8 @@ public class Main{
 *********************------------------**************************
 *********************------------------**************************
 *********************------------------**************************
+___________________________________________________________________________________________________________________________
+
 27/02/2025
 
 1.CONSTRUCTER
@@ -213,6 +215,7 @@ class WALL {
  *********************------------------**************************
  *********************------------------**************************
 
+___________________________________________________________________________________________________________________________
 
 01/03/2025
 
@@ -363,3 +366,110 @@ public class Main{
  *********************------------------**************************
  *********************------------------**************************
  *********************------------------**************************
+
+___________________________________________________________________________________________________________________________
+
+04/03/2025
+
+1.ABSTARCTION
+
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    vehicle ob=new bike();
+    ob.start();
+  }
+}
+interface vehicle{
+  void start();
+}
+class bike implements vehicle{
+  public void start(){
+    System.out.println("bike started");
+  }
+}
+
+ *********************------------------**************************
+
+2.ABSTRACTION
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    shape ob=new rect(2.5,3.5);
+    System.out.println(ob.area());
+  }
+}
+abstract class shape{
+  double dime1,dime2;
+  shape (double d1,double d2){
+    dime1=d1;
+    dime2=d2;
+  }
+  abstract double area();
+}
+class rect extends shape{
+  rect(double l,double b){
+    super(l,b);
+  }
+  double area(){
+    return dime1*dime2;
+  }
+}
+
+*********************------------------**************************
+
+3.EXCEPTION
+
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+      int arr[]={10,5};
+      try {
+        System.out.println(arr[5]);
+      } catch(Exception e) {
+        System.out.println(e.getMessage());
+      }
+      System.out.println(arr[0]);
+    }
+}
+
+*********************------------------**************************
+
+4.THROW,THROWS METHOD
+
+import java.util.*;
+public class Main{
+  public static void main(String[] args){
+    try{
+      print(55);
+      print(35);
+    }
+    catch (Exception e){
+      System.out.println(e.getMessage());
+    }
+  
+}
+ 
+  public static void print(int mark)throws MyExcep{
+    if(mark<45){
+    throw new MyExcep("Arivu Illaya Fail aagiruka");
+    }
+    else
+    System.out.println("Passed");
+  }
+
+}
+ public class MyExcep extends Exception{
+    MyExcep(String msg){
+      super(msg);
+    
+    }
+ }
+
+*********************------------------**************************
+*********************------------------**************************
+*********************------------------**************************
+
+___________________________________________________________________________________________________________________________
+
+
