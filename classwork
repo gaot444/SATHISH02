@@ -472,4 +472,69 @@ public class Main{
 
 ___________________________________________________________________________________________________________________________
 
+06/03/2025
 
+1.CREATE A NODE
+class Node{
+int data;
+Node next;
+Node(int a);
+{
+data=a;
+next=num;
+}
+}
+
+*********************------------------**************************
+
+2.DATA STRUCTURE(LINKED LIST)
+
+import java.util.*;
+class LL{
+    Node start;
+    class Node{
+        int data;
+        Node next;
+        Node(int a){
+            data=a;
+            next=null;
+        }
+    }
+    public void insertbeg(int val){
+        Node newNode=new Node(val);
+        newNode.next=start;
+        start=newNode;
+       
+    }
+    public void insertend(int val){
+        Node newNode=new Node(val);
+        Node tpr=start;
+        while(tpr.next!=null){
+            tpr=tpr.next;
+        }
+        tpr.next=newNode;
+       
+    }
+    public void display(){
+        Node tpr=start;
+        while(tpr!=null){
+            System.out.println(tpr.data+" --> "+tpr.next);
+            tpr=tpr.next;
+        }
+       
+    }
+}
+
+public class Main{
+ public static void main(String[] args) {
+     LL ob=new LL();
+     ob.insertbeg(10);
+     ob.insertbeg(20);
+     ob.insertbeg(30);
+     ob.insertend(80);
+     ob.insertend(200);
+     ob.display();
+ }
+}
+
+*********************------------------**************************
